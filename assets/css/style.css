@@ -1,0 +1,52 @@
+
+body {
+    background-color:darkgray;
+}
+
+#bar-across-top {
+    font-family: 'Passion One', sans-serif;
+}
+
+
+#score {
+    margin: 80px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-weight: bold;
+}
+
+
+button {
+    display: inline-block;
+    margin: 30px;
+}
+
+#time-update-zone {
+    margin-top: 200px;
+    font-size: x-small;
+
+}
+
+#carson-button {
+    background-color: blue;
+    border-color: blue;
+    min-height: 50px;
+    min-width: 120px;
+    font-weight: bold;
+}
+
+#morgan-button {
+    background-color: red;
+    border-color: red;
+    min-height: 50px;
+    min-width: 120px;
+    font-weight: bold;
+    outline: none;
+}
+
+button:focus {
+    border: none;
+    outline: none;
+    margin: none;
+    padding: none;
+    outline-style: none;
+}
