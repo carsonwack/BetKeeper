@@ -15,23 +15,7 @@ $(document).ready(function () {
     let morganTotal = 0;
     let carsonTotal = 0;
     let scoreCurrent = $("#score").text();
-    let d = new Date();
-    let hour;
-    let amOrPm;
 
-    function dayOfWeek() {
-        let d = new Date();
-        let weekday = new Array(7);
-        weekday[0] = "Sunday";
-        weekday[1] = "Monday";
-        weekday[2] = "Tuesday";
-        weekday[3] = "Wednesday";
-        weekday[4] = "Thursday";
-        weekday[5] = "Friday";
-        weekday[6] = "Saturday";
-        let n = weekday[d.getDay()];
-        return n;  
-    }
  
 
     function chBackCol(color) {
@@ -48,11 +32,7 @@ $(document).ready(function () {
             document.getElementById("score").style.fontSize = "initial";
         }, 1500);
 
-        hour = (d.getHours() > 12) ? d.getHours() : d.getHours() - 12;
-        amOrPm = (d.getHours() < 12) ? "AM" : "PM";
-
-
-        $("#time").text(`Last Bet Update:  Morgan +1 (${dayOfWeek()} ${d.getMonth() + 1}/${d.getDate()} at ${d.getHours()}:${d.getMinutes()} ${amOrPm})`);
+        $("#time").text("Last button click: \xa0\xa0 Morgan +1  " + "\xa0\xa0\xa0" + "-" + "\xa0\xa0\xa0" + moment().format("dddd MMM MM [at] hh:mm a"));
 
         morganTotal++;
 
@@ -99,10 +79,7 @@ $(document).ready(function () {
 
         setTimeout(`${chBackCol("blue")}`, 1000);
 
-        hour = (d.getHours() < 12) ? d.getHours() : d.getHours() - 12;
-        amOrPm = (d.getHours() < 12) ? "AM" : "PM";
-
-        $("#time").text(`Last Bet Update:  Carson +1 (${dayOfWeek()} ${d.getMonth() + 1}/${d.getDate()} at ${d.getHours()}:${d.getMinutes()} ${amOrPm})`);
+        $("#time").text("Last button click: \xa0\xa0 Carson +1" + "\xa0\xa0\xa0" + "-" + "\xa0\xa0\xa0" + moment().format("dddd MMM MM [at] hh:mm a"));
 
         carsonTotal++;
 
@@ -155,26 +132,6 @@ $(document).ready(function () {
     }, function (errorObject) {
         console.log("Errors handled: " + errorObject.code);
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-console.log(moment().month());
 
 
 });
