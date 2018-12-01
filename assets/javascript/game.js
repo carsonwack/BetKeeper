@@ -32,7 +32,7 @@ $(document).ready(function () {
             document.getElementById("score").style.fontSize = "initial";
         }, 1500);
 
-        $("#time").text("Last button click: \xa0\xa0 Morgan +1  " + "\xa0\xa0\xa0" + "-" + "\xa0\xa0\xa0" + moment().format("dddd MMM MM [at] hh:mm a"));
+        $("#time").text("Last button click: \xa0\xa0 Morgan +1  " + "\xa0\xa0\xa0" + "-" + "\xa0\xa0\xa0" + moment().format("dddd MMM DD [at] hh:mm a"));
 
         morganTotal++;
 
@@ -79,7 +79,7 @@ $(document).ready(function () {
 
         setTimeout(`${chBackCol("blue")}`, 1000);
 
-        $("#time").text("Last button click: \xa0\xa0 Carson +1" + "\xa0\xa0\xa0" + "-" + "\xa0\xa0\xa0" + moment().format("dddd MMM MM [at] hh:mm a"));
+        $("#time").text("Last button click: \xa0\xa0 Carson +1" + "\xa0\xa0\xa0" + "-" + "\xa0\xa0\xa0" + moment().format("dddd MMM DD [at] hh:mm a"));
 
         carsonTotal++;
 
